@@ -10,18 +10,19 @@ The source distribution of ESEPP includes the following files:
 
 * DOCUMENTATION
   * **README.md** (this markdown file)
+  * **input_output.pdf** (description of the input parameters and the output files format)
   * **calc_lepton.pdf** (Mathematica/FeynCalc calculation of the lepton bremsstrahlung term)
   * **calc_proton.pdf** (Mathematica/FeynCalc calculation of the proton bremsstrahlung term)
   * **calc_interference.pdf** (Mathematica/FeynCalc calculation of the interference bremsstrahlung term)
   * **LICENSE** (the GNU General Public License)
 * SOURCE CODE
-  * **Makefile**
-  * **Makefile.arch**
-  * **esepp.cxx**
-  * **esepp.h**
-  * **const.h**
-  * **dialog.h**
-  * **lepton.h**
-  * **proton.h** 
-  * **interference.h**
-  * **vpol.dat**
+  * **Makefile** (makefile to build an executable program)
+  * **Makefile.arch** (architecture-dependent part of the makefile)
+  * **esepp.cxx** (main source file)
+  * **esepp.h** (main header file)
+  * **const.h** (header file containing mathematical and physical constants)
+  * **dialog.h** (header file for an initial dialogue)
+  * **lepton.h** (header file containing the lepton bremsstrahlung term)
+  * **proton.h** (header file containing the proton bremsstrahlung term)
+  * **interference.h** (header file containing the interference bremsstrahlung term)
+  * **vpol.dat** (data file for the vacuum polarization correction, extracted from [here](http://cmd.inp.nsk.su/~ignatov/vpl/vpol_all_bare_sum_v1.dat))
