@@ -4,7 +4,7 @@
 #
 # Author: Fons Rademakers, 29/2/2000
 #
-# Modified by Alexander Gramolin, 2014
+# Modified by Alexander Gramolin, 2019
 
 ROOTCONFIG   := root-config
 
@@ -40,7 +40,7 @@ ROOTLDFLAGS  := $(shell $(ROOTCONFIG) --ldflags)
 ROOTLIBS     := $(shell $(ROOTCONFIG) --libs) -lMathMore -lFoam
 ROOTGLIBS    := $(shell $(ROOTCONFIG) --glibs)
 HASTHREAD    := $(shell $(ROOTCONFIG) --has-thread)
-ROOTDICTTYPE := $(shell $(ROOTCONFIG) --dicttype)
+#ROOTDICTTYPE := $(shell $(ROOTCONFIG) --dicttype)
 #NOSTUBS      := $(shell $(ROOTCONFIG) --nostubs)
 ROOTCINT     := rootcint
 

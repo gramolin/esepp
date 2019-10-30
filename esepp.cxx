@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------------------------
 // The ESEPP event generator (Elastic Scattering of Electrons and Positrons on Protons)
-// Version 1.4 (April 27, 2014)
+// Version 1.5 (October 29, 2019)
 // Detailed description: A.V. Gramolin, et al., arXiv:1401.2959
 //
 // ESEPP is free software: you can redistribute it and/or modify
@@ -16,8 +16,8 @@
 // You should have received a copy of the GNU General Public License
 // along with ESEPP.  If not, see <http://www.gnu.org/licenses/>.
 //
-// Copyright (c) Alexander Gramolin, 2014. E-mail: gramolin (at) inp.nsk.su 
-// http://gramolin.com/esepp/
+// Copyright (c) Alexander Gramolin, 2019. E-mail: gramolin (at) bu.edu
+// https://github.com/gramolin/esepp/
 //==============================================================================================
 
 
@@ -255,7 +255,7 @@ public:
       // Checking the the square of the amplitude:
       if (M_sum < 0.)
         {
-	cout << endl << "Warning: negative value! M_sum = " << M_sum << endl;
+	std::cout << std::endl << "Warning: negative value! M_sum = " << M_sum << std::endl;
         flag_warn = true;
         return 0.;
 	}
@@ -273,7 +273,7 @@ public:
       // Checking the the square of the amplitude:
       if (M_sum < 0.)
         {
-        cout << endl << "Warning: negative value! M_sum = " << M_sum << endl;
+        std::cout << std::endl << "Warning: negative value! M_sum = " << M_sum << std::endl;
         flag_warn = true;
         return 0.;
 	}
@@ -291,7 +291,7 @@ public:
       // Checking the the square of the amplitude:
       if (M_sum < 0.)
         {
-	cout << endl << "Warning: negative value! M_sum = " << M_sum << endl;
+	std::cout << std::endl << "Warning: negative value! M_sum = " << M_sum << std::endl;
         flag_warn = true;
         return 0.;
 	}
@@ -420,7 +420,7 @@ public:
       // Checking the the square of the amplitude:
       if (M_sum < 0.)
         {
-	cout << endl << "Warning: negative value! M_sum = " << M_sum << endl;
+	std::cout << std::endl << "Warning: negative value! M_sum = " << M_sum << std::endl;
         flag_warn = true;
         return 0.;
 	}
@@ -438,7 +438,7 @@ public:
       // Checking the the square of the amplitude:
       if (M_sum < 0.)
         {
-	cout << endl << "Warning: negative value! M_sum = " << M_sum << endl;
+	std::cout << std::endl << "Warning: negative value! M_sum = " << M_sum << std::endl;
         flag_warn = true;
         return 0.;
 	}
@@ -456,7 +456,7 @@ public:
       // Checking the the square of the amplitude:
       if (M_sum < 0.)
         {
-	cout << endl << "Warning: negative value! M_sum = " << M_sum << endl;
+	std::cout << std::endl << "Warning: negative value! M_sum = " << M_sum << std::endl;
         flag_warn = true;
         return 0.;
 	}
@@ -504,35 +504,35 @@ if (argc > 1)
     
     if (str == "-c" || str == "-C") // Key "-c"
       {
-      cout << endl << "This program is free software: you can redistribute it and/or modify" << endl;
-      cout << "it under the terms of the GNU General Public License as published by" << endl;
-      cout << "the Free Software Foundation, either version 3 of the License, or" << endl;
-      cout << "(at your option) any later version." << endl;
+      std::cout << std::endl << "This program is free software: you can redistribute it and/or modify" << std::endl;
+      std::cout << "it under the terms of the GNU General Public License as published by" << std::endl;
+      std::cout << "the Free Software Foundation, either version 3 of the License, or" << std::endl;
+      std::cout << "(at your option) any later version." << std::endl;
 
-      cout << endl << "You should have received a copy of the GNU General Public License" << endl;
-      cout << "along with this program. If not, see http://www.gnu.org/licenses/." << endl;
+      std::cout << std::endl << "You should have received a copy of the GNU General Public License" << std::endl;
+      std::cout << "along with this program. If not, see http://www.gnu.org/licenses/." << std::endl;
       }
     
     if (str == "-w" || str == "-W") // Key "-w"
       {
-      cout << endl << "This program is distributed in the hope that it will be useful," << endl;
-      cout << "but WITHOUT ANY WARRANTY; without even the implied warranty of" << endl;
-      cout << "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the" << endl;
-      cout << "GNU General Public License for more details." << endl;
+      std::cout << std::endl << "This program is distributed in the hope that it will be useful," << std::endl;
+      std::cout << "but WITHOUT ANY WARRANTY; without even the implied warranty of" << std::endl;
+      std::cout << "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the" << std::endl;
+      std::cout << "GNU General Public License for more details." << std::endl;
 
-      cout << endl << "You should have received a copy of the GNU General Public License" << endl;
-      cout << "along with this program. If not, see http://www.gnu.org/licenses/." << endl;
+      std::cout << std::endl << "You should have received a copy of the GNU General Public License" << std::endl;
+      std::cout << "along with this program. If not, see http://www.gnu.org/licenses/." << std::endl;
       }
       
     if (str == "-h" || str == "-help" || str == "--help") // Help (keys "-h", "-help" or "--help")
       {
-      cout << endl << "You can run esepp with the following options:" << endl << endl;
-      cout << "-help       to print this help;" << endl;
-      cout << "-info       to print additional information;" << endl;
-      cout << "-init N     to set the number N of events for initialization;" << endl;
-      cout << "-quick      to speed up the calculations (only for debugging!);" << endl;
-      cout << "-target     to work with a storage cell;" << endl;
-      cout << "-vepp       to generate events for the VEPP-3 experiment." << endl << endl;
+      std::cout << std::endl << "You can run esepp with the following options:" << std::endl << std::endl;
+      std::cout << "-help       to print this help;" << std::endl;
+      std::cout << "-info       to print additional information;" << std::endl;
+      std::cout << "-init N     to set the number N of events for initialization;" << std::endl;
+      std::cout << "-quick      to speed up the calculations (only for debugging!);" << std::endl;
+      std::cout << "-target     to work with a storage cell;" << std::endl;
+      std::cout << "-vepp       to generate events for the VEPP-3 experiment." << std::endl << std::endl;
       return EXIT_SUCCESS;
       }
     }
@@ -660,13 +660,13 @@ if (flag_info == true)
   EvalKinematicParams(0.); // Evaluation of some kinematic parameters
   SetFinalFourMomenta();   // Set four-momenta for the final particles
 
-  cout << endl << "theta_l = " << theta_l/degrad << " degree, Q^2 = " << -qq << " GeV^2, epsilon = " << eps << endl;
-  cout << "Mott differential cross section: " << Pow2(alpha*Cos(theta_l/2.)/(2.*E_li*Pow2(Sin(theta_l/2.))))*(E_lf/E_li)*mkb << " microbarn / steradian" << endl;
-  cout << "d_virt = " << inter_virt.Eval(theta_l) << ", d_brem = " << d_brem_ee() + d_brem_ep() + d_brem_pp() << ", d_prime = " << d_prime() << endl;
-  cout << "d_brem: d_brem_ee = " << d_brem_ee() << ", d_brem_ep = " << d_brem_ep() << ", d_brem_pp = " << d_brem_pp() << endl;
-  cout << "d_virt: d_vertex = " << d_vertex() << ", d_vac_e = " << d_vac_e() << ", d_vac_mu = " << d_vac_mu() << ", d_vac_tau = " << d_vac_tau();
-  if (flag_vpol == 3) cout << ", d_vac = " << inter_vpol.Eval(-qq);
-  cout << endl;
+  std::cout << std::endl << "theta_l = " << theta_l/degrad << " degree, Q^2 = " << -qq << " GeV^2, epsilon = " << eps << std::endl;
+  std::cout << "Mott differential cross section: " << Pow2(alpha*Cos(theta_l/2.)/(2.*E_li*Pow2(Sin(theta_l/2.))))*(E_lf/E_li)*mkb << " microbarn / steradian" << std::endl;
+  std::cout << "d_virt = " << inter_virt.Eval(theta_l) << ", d_brem = " << d_brem_ee() + d_brem_ep() + d_brem_pp() << ", d_prime = " << d_prime() << std::endl;
+  std::cout << "d_brem: d_brem_ee = " << d_brem_ee() << ", d_brem_ep = " << d_brem_ep() << ", d_brem_pp = " << d_brem_pp() << std::endl;
+  std::cout << "d_virt: d_vertex = " << d_vertex() << ", d_vac_e = " << d_vac_e() << ", d_vac_mu = " << d_vac_mu() << ", d_vac_tau = " << d_vac_tau();
+  if (flag_vpol == 3) std::cout << ", d_vac = " << inter_vpol.Eval(-qq);
+  std::cout << std::endl;
   }
 //==============================================================================================
 
@@ -705,7 +705,7 @@ if (flag_rosen == true) // Rosenbluth events
   TFoamIntegrand *Rho_Ros = new TFDISTR0();
 
   // Initialization of the Foam_Ros simulator (Rosenbluth events):
-  cout << endl << "Initialization (Rosenbluth scattering):" << endl;
+  std::cout << std::endl << "Initialization (Rosenbluth scattering):" << std::endl;
   Foam_Ros->SetkDim(1);           // Set number of dimensions
   Foam_Ros->SetnCells(nCells_1D); // Set number of cells
   Foam_Ros->SetnSampl(nSampl_1D); // Set number os samples
@@ -722,11 +722,11 @@ if (flag_lepton != 2 && flag_lepton != 5)  // For negatively charged leptons
   TFoamIntegrand *Rho_ElE = new TFDISTR1e(); // Elastic scattering, e-/mu-
   TFoamIntegrand *Rho_BrE = new TFDISTR2e(); // First-order bremsstrahlung, e-/mu-
   
-  cout << endl;
+  std::cout << std::endl;
   
   // Initialization of the Foam_ElE1 simulator (elastic scattering, e-/mu-):
-  if (flag_lepton == 1 || flag_lepton == 3) cout << "Initialization (elastic scattering, e-):" << endl;
-  if (flag_lepton == 4 || flag_lepton == 6) cout << "Initialization (elastic scattering, mu-):" << endl;
+  if (flag_lepton == 1 || flag_lepton == 3) std::cout << "Initialization (elastic scattering, e-):" << std::endl;
+  if (flag_lepton == 4 || flag_lepton == 6) std::cout << "Initialization (elastic scattering, mu-):" << std::endl;
   Foam_ElE->SetkDim(1);           // Set number of dimensions
   Foam_ElE->SetnCells(nCells_1D); // Set number of cells
   Foam_ElE->SetnSampl(nSampl_1D); // Set number os samples
@@ -736,13 +736,13 @@ if (flag_lepton != 2 && flag_lepton != 5)  // For negatively charged leptons
   Foam_ElE->SetChat(1);           // Set "chat level" in the standard output
   Foam_ElE->Initialize();         // Initialization
   
-  cout << endl;
+  std::cout << std::endl;
   
   en_sign = -1.; // The "-" root of the equation for the scattered lepton energy
   
   // Initialization of the Foam_BrE1 simulator (bremsstrahlung, e-/mu-, root "-"):
-  if (flag_lepton == 1 || flag_lepton == 3) cout << "Initialization (bremsstrahlung, e-, root \"-\"):" << endl;
-  if (flag_lepton == 4 || flag_lepton == 6) cout << "Initialization (bremsstrahlung, mu-, root \"-\"):" << endl;
+  if (flag_lepton == 1 || flag_lepton == 3) std::cout << "Initialization (bremsstrahlung, e-, root \"-\"):" << std::endl;
+  if (flag_lepton == 4 || flag_lepton == 6) std::cout << "Initialization (bremsstrahlung, mu-, root \"-\"):" << std::endl;
   Foam_BrE1->SetkDim(4);           // Set number of dimensions
   Foam_BrE1->SetnCells(nCells_4D); // Set number of cells
   Foam_BrE1->SetnSampl(nSampl_4D); // Set number os samples
@@ -754,13 +754,13 @@ if (flag_lepton != 2 && flag_lepton != 5)  // For negatively charged leptons
   
   if (flag_mode > 3)
     {
-    cout << endl;
+    std::cout << std::endl;
       
     en_sign = +1.; // The "+" root of the equation for the scattered lepton energy  
 
     // Initialization of the Foam_BrE2 simulator (bremsstrahlung, e-/mu-, root "+"):
-    if (flag_lepton == 1 || flag_lepton == 3) cout << "Initialization (bremsstrahlung, e-, root \"+\"):" << endl;
-    if (flag_lepton == 4 || flag_lepton == 6) cout << "Initialization (bremsstrahlung, mu-, root \"+\"):" << endl;
+    if (flag_lepton == 1 || flag_lepton == 3) std::cout << "Initialization (bremsstrahlung, e-, root \"+\"):" << std::endl;
+    if (flag_lepton == 4 || flag_lepton == 6) std::cout << "Initialization (bremsstrahlung, mu-, root \"+\"):" << std::endl;
     Foam_BrE2->SetkDim(4);           // Set number of dimensions
     Foam_BrE2->SetnCells(nCells_4D); // Set number of cells
     Foam_BrE2->SetnSampl(nSampl_4D); // Set number os samples
@@ -771,7 +771,7 @@ if (flag_lepton != 2 && flag_lepton != 5)  // For negatively charged leptons
     Foam_BrE2->Initialize();         // Initialization
   
     bre2 = Foam_BrE2->GetPrimary();
-    if (bre2 == 0) cout << "Foam_BrE2 (bremsstrahlung, e-/mu-, root \"+\"): no need to use." << endl;
+    if (bre2 == 0) std::cout << "Foam_BrE2 (bremsstrahlung, e-/mu-, root \"+\"): no need to use." << std::endl;
     }
   else bre2 = 0;
   }
@@ -782,11 +782,11 @@ if (flag_lepton != 1 && flag_lepton != 4)  // For positively charged leptons
   TFoamIntegrand *Rho_ElP = new TFDISTR1p(); // Elastic scattering, e+/mu+
   TFoamIntegrand *Rho_BrP = new TFDISTR2p(); // First-order bremsstrahlung, e+/mu+
 
-  cout << endl;
+  std::cout << std::endl;
   
   // Initialization of the Foam_ElP simulator (elastic scattering, e+/mu+):
-  if (flag_lepton == 2 || flag_lepton == 3) cout << "Initialization (elastic scattering, e+):" << endl;
-  if (flag_lepton == 5 || flag_lepton == 6) cout << "Initialization (elastic scattering, mu+):" << endl;
+  if (flag_lepton == 2 || flag_lepton == 3) std::cout << "Initialization (elastic scattering, e+):" << std::endl;
+  if (flag_lepton == 5 || flag_lepton == 6) std::cout << "Initialization (elastic scattering, mu+):" << std::endl;
   Foam_ElP->SetkDim(1);           // Set number of dimensions
   Foam_ElP->SetnCells(nCells_1D); // Set number of cells
   Foam_ElP->SetnSampl(nSampl_1D); // Set number os samples
@@ -796,13 +796,13 @@ if (flag_lepton != 1 && flag_lepton != 4)  // For positively charged leptons
   Foam_ElP->SetChat(1);           // Set "chat level" in the standard output
   Foam_ElP->Initialize();         // Initialization
 
-  cout << endl;
+  std::cout << std::endl;
   
   en_sign = -1.; // The "-" root of the equation for the scattered lepton energy
   
   // Initialization of the Foam_BrP simulator (bremsstrahlung, e+/mu+, root "-"):
-  if (flag_lepton == 2 || flag_lepton == 3) cout << "Initialization (bremsstrahlung, e+, root \"-\"):" << endl;
-  if (flag_lepton == 5 || flag_lepton == 6) cout << "Initialization (bremsstrahlung, mu+, root \"-\"):" << endl;
+  if (flag_lepton == 2 || flag_lepton == 3) std::cout << "Initialization (bremsstrahlung, e+, root \"-\"):" << std::endl;
+  if (flag_lepton == 5 || flag_lepton == 6) std::cout << "Initialization (bremsstrahlung, mu+, root \"-\"):" << std::endl;
   Foam_BrP1->SetkDim(4);           // Set number of dimensions
   Foam_BrP1->SetnCells(nCells_4D); // Set number of cells
   Foam_BrP1->SetnSampl(nSampl_4D); // Set number os samples
@@ -814,13 +814,13 @@ if (flag_lepton != 1 && flag_lepton != 4)  // For positively charged leptons
   
   if (flag_mode > 3)
     {
-    cout << endl;
+    std::cout << std::endl;
 
     en_sign = +1.; // The "+" root of the equation for the scattered lepton energy
   
     // Initialization of the Foam_BrP simulator (bremsstrahlung, e+/mu+, root "+"):
-    if (flag_lepton == 2 || flag_lepton == 3) cout << "Initialization (bremsstrahlung, e+, root \"+\"):" << endl;
-    if (flag_lepton == 5 || flag_lepton == 6) cout << "Initialization (bremsstrahlung, mu+, root \"+\"):" << endl;
+    if (flag_lepton == 2 || flag_lepton == 3) std::cout << "Initialization (bremsstrahlung, e+, root \"+\"):" << std::endl;
+    if (flag_lepton == 5 || flag_lepton == 6) std::cout << "Initialization (bremsstrahlung, mu+, root \"+\"):" << std::endl;
     Foam_BrP2->SetkDim(4);           // Set number of dimensions
     Foam_BrP2->SetnCells(nCells_4D); // Set number of cells
     Foam_BrP2->SetnSampl(nSampl_4D); // Set number os samples
@@ -831,7 +831,7 @@ if (flag_lepton != 1 && flag_lepton != 4)  // For positively charged leptons
     Foam_BrP2->Initialize();         // Initialization
   
     brp2 = Foam_BrP2->GetPrimary();
-    if (brp2 == 0) cout << "Foam_BrP2 (bremsstrahlung, e+/mu+, root \"+\"): no need to use." << endl;
+    if (brp2 == 0) std::cout << "Foam_BrP2 (bremsstrahlung, e+/mu+, root \"+\"): no need to use." << std::endl;
     }
   else brp2 = 0;
   }
@@ -850,7 +850,7 @@ if (flag_init == false)
   }
 
 i = 0;
-cout << setprecision(3) << endl;
+std::cout << std::setprecision(3) << std::endl;
 en_sign = -1.; // The "-" root of the equation for the scattered lepton energy
 
 // Negatively charged leptons:------------------------------------------------------------------
@@ -863,13 +863,13 @@ if (flag_lepton == 1 || flag_lepton == 4)
     // The progress bar:
     if (loop == long (0.01*i*(ninit - 1)))
       {
-      cout << "Initialization 1 (" << ninit << " events): ";
-      cout << i << "%" << '\r' << flush;
+      std::cout << "Initialization 1 (" << ninit << " events): ";
+      std::cout << i << "%" << '\r' << std::flush;
       i += 1;
       }
     }
     
-  cout << endl;  
+  std::cout << std::endl;  
   Foam_BrE1->GetIntegMC(bre1, bre_error); // Cross section for e-/mu-, root "-"
   }
 
@@ -883,13 +883,13 @@ if (flag_lepton == 2 || flag_lepton == 5)
     // The progress bar:
     if (loop == long (0.01*i*(ninit - 1)))
       {
-      cout << "Initialization 1 (" << ninit << " events): ";
-      cout << i << "%" << '\r' << flush;
+      std::cout << "Initialization 1 (" << ninit << " events): ";
+      std::cout << i << "%" << '\r' << std::flush;
       i += 1;
       }
     }
     
-  cout << endl;
+  std::cout << std::endl;
   Foam_BrP1->GetIntegMC(brp1, brp_error); // Cross section for e+/mu+, root "-"
   }
 
@@ -904,19 +904,19 @@ if (flag_lepton == 3 || flag_lepton == 6)
     // The progress status:
     if (loop == long (0.01*i*(ninit - 1)))
       {
-      cout << "Initialization 1 (" << ninit << " events): ";
-      cout << i << "%" << '\r' << flush;
+      std::cout << "Initialization 1 (" << ninit << " events): ";
+      std::cout << i << "%" << '\r' << std::flush;
       i += 1;
       }
     }
 
-  cout << endl;
+  std::cout << std::endl;
   Foam_BrE1->GetIntegMC(bre1, bre_error); // Cross section for e-/mu-, root "-"
   Foam_BrP1->GetIntegMC(brp1, brp_error); // Cross section for e+/mu+, root "-"
   }
 
 // Initialization 2 (for "+" roots):
-if (bre2 == 0 && brp2 == 0) cout << "Initialization 2: no need to perform";
+if (bre2 == 0 && brp2 == 0) std::cout << "Initialization 2: no need to perform";
 else
   {
   i = 0;
@@ -933,14 +933,14 @@ else
     // The progress status:
     if (loop == long (0.01*i*(long (0.05*ninit) - 1)))
       {
-      cout << "Initialization 2 (" << long (0.05*ninit) << " events): ";
-      cout << i << "%" << '\r' << flush;
+      std::cout << "Initialization 2 (" << long (0.05*ninit) << " events): ";
+      std::cout << i << "%" << '\r' << std::flush;
       i += 1;
       }
     }
   }
 
-cout << endl;
+std::cout << std::endl;
 if (bre2 > 0) Foam_BrE2->GetIntegMC(bre2, bre_error); // Cross section for e-/mu-, root "+"
 if (brp2 > 0) Foam_BrP2->GetIntegMC(brp2, brp_error); // Cross section for e+/mu+, root "+"
 //==============================================================================================
@@ -1045,11 +1045,11 @@ if (flag_info == true)
   check_e = (phi_max-phi_min)*mkb*(check_e - i_el_e.Integral(theta_min, theta_max))/omega; // e-/mu-
   check_p = (phi_max-phi_min)*mkb*(check_p - i_el_p.Integral(theta_min, theta_max))/omega; //e+/mu+
   
-  cout << endl << "Bremsstrahlung cross section, microbarn / steradian" << endl;
-  cout << "(E_g from " << 1000.*E_g_cut << " to " << 1000.*E_g_max << " MeV):" << endl;
-  cout << "analytical integration, e-/mu-: " << scientific << check_e << ", e+/mu+: " << check_p << endl;
-  cout << " numerical integration, e-/mu-: " << (bre1 + bre2)/omega << ", e+/mu+: " << (brp1 + brp2)/omega << endl << endl;
-  cout.unsetf(ios_base::floatfield); // The default format for cout
+  std::cout << std::endl << "Bremsstrahlung cross section, microbarn / steradian" << std::endl;
+  std::cout << "(E_g from " << 1000.*E_g_cut << " to " << 1000.*E_g_max << " MeV):" << std::endl;
+  std::cout << "analytical integration, e-/mu-: " << std::scientific << check_e << ", e+/mu+: " << check_p << std::endl;
+  std::cout << " numerical integration, e-/mu-: " << (bre1 + bre2)/omega << ", e+/mu+: " << (brp1 + brp2)/omega << std::endl << std::endl;
+  std::cout.unsetf(std::ios::floatfield); // The default format for std::cout
   }
 //==============================================================================================
 
@@ -1091,12 +1091,12 @@ for (loop = 0; loop < nev_0; loop++)
   // The progress status for Rosenbluth events:
   if (loop == long (0.01*i*(nev_0 - 1)))
     {
-    cout << "Generation of " << nev_0 << " Rosenbluth events: " << i << "%" << '\r' << flush;
+    std::cout << "Generation of " << nev_0 << " Rosenbluth events: " << i << "%" << '\r' << std::flush;
     i += 1;
     }
   }
   
-if (nev_0 > 0) cout << endl;
+if (nev_0 > 0) std::cout << std::endl;
   
 // The end of generating events for the Rosenbluth scattering
 //==============================================================================================
@@ -1181,15 +1181,15 @@ for (loop = 0; loop < nev_e; loop++)
   // The progress status for e-/mu- events:
   if (loop == long (0.01*i*(nev_e - 1)))
     {
-    if (flag_lepton == 1 || flag_lepton == 3) cout << "Generation of " << nev_e << " events for e-: ";
-    if (flag_lepton == 4 || flag_lepton == 6) cout << "Generation of " << nev_e << " events for mu-: ";
-    cout << i << "%" << '\r' << flush;
+    if (flag_lepton == 1 || flag_lepton == 3) std::cout << "Generation of " << nev_e << " events for e-: ";
+    if (flag_lepton == 4 || flag_lepton == 6) std::cout << "Generation of " << nev_e << " events for mu-: ";
+    std::cout << i << "%" << '\r' << std::flush;
     i += 1;
     }
     
   }
 
-if (nev_e > 0) cout << endl;
+if (nev_e > 0) std::cout << std::endl;
   
 // The end of generating events for the case of e-/mu-
 //==============================================================================================
@@ -1274,15 +1274,15 @@ for (loop = 0; loop < nev_p; loop++)
   // The progress status for e+/mu+ events:
   if (loop == long (0.01*i*(nev_p - 1)))
     {
-    if (flag_lepton == 2 || flag_lepton == 3) cout << "Generation of " << nev_p << " events for e+: ";
-    if (flag_lepton == 5 || flag_lepton == 6) cout << "Generation of " << nev_p << " events for mu+: ";
-    cout << i << "%" << '\r' << flush;
+    if (flag_lepton == 2 || flag_lepton == 3) std::cout << "Generation of " << nev_p << " events for e+: ";
+    if (flag_lepton == 5 || flag_lepton == 6) std::cout << "Generation of " << nev_p << " events for mu+: ";
+    std::cout << i << "%" << '\r' << std::flush;
     i += 1;
     }
     
   }
   
-if (nev_p > 0) cout << endl;
+if (nev_p > 0) std::cout << std::endl;
   
 // The end of generating events for the case of e+/mu+
 //==============================================================================================
@@ -1302,7 +1302,7 @@ if (flag_root == true) // Files *.root
   if (flag_rosen == true) // Rosenbluth events
     {
     froot_0->cd();
-    cout << endl;
+    std::cout << std::endl;
     ntp_0->Print();
     froot_0->Write();
     froot_0->Close();
@@ -1311,7 +1311,7 @@ if (flag_root == true) // Files *.root
   if (flag_lepton != 2 && flag_lepton != 5) // e-/mu-
     {
     froot_e->cd();
-    cout << endl;
+    std::cout << std::endl;
     ntp_e->Print();
     froot_e->Write();
     froot_e->Close();
@@ -1320,7 +1320,7 @@ if (flag_root == true) // Files *.root
   if (flag_lepton != 1 && flag_lepton != 4) // e+/mu+
     {
     froot_p->cd();
-    cout << endl;
+    std::cout << std::endl;
     ntp_p->Print();
     froot_p->Write();
     froot_p->Close();
@@ -1334,42 +1334,42 @@ if (flag_root == true) // Files *.root
 double x1, x2;
 if (flag_rosen == true) // For Rosenbluth events
   {
-  cout << endl << "Finalization (Rosenbluth scattering):" << endl;
+  std::cout << std::endl << "Finalization (Rosenbluth scattering):" << std::endl;
   Foam_Ros->Finalize(x1, x2); // Foam_Ros: Rosenbluth scattering
   }
 
 if (flag_lepton != 2 && flag_lepton != 5) // For negatively charged leptons
   {
-  if (flag_lepton == 1 || flag_lepton == 3) cout << endl << "Finalization (elastic scattering, e-):" << endl;
-  if (flag_lepton == 4 || flag_lepton == 6) cout << endl << "Finalization (elastic scattering, mu-):" << endl;
+  if (flag_lepton == 1 || flag_lepton == 3) std::cout << std::endl << "Finalization (elastic scattering, e-):" << std::endl;
+  if (flag_lepton == 4 || flag_lepton == 6) std::cout << std::endl << "Finalization (elastic scattering, mu-):" << std::endl;
   Foam_ElE->Finalize(x1, x2); // Foam_ElE: elastic scattering, e-/mu-
   
-  if (flag_lepton == 1 || flag_lepton == 3) cout << endl << "Finalization (bremsstrahlung, e-, root \"-\"):" << endl;
-  if (flag_lepton == 4 || flag_lepton == 6) cout << endl << "Finalization (bremsstrahlung, mu-, root \"-\"):" << endl;
+  if (flag_lepton == 1 || flag_lepton == 3) std::cout << std::endl << "Finalization (bremsstrahlung, e-, root \"-\"):" << std::endl;
+  if (flag_lepton == 4 || flag_lepton == 6) std::cout << std::endl << "Finalization (bremsstrahlung, mu-, root \"-\"):" << std::endl;
   Foam_BrE1->Finalize(x1, x2); // Foam_BrE1: bremsstrahlung, e-/mu-, root "-"
   
   if (bre2 > 0)
     {
-    if (flag_lepton == 1 || flag_lepton == 3) cout << endl << "Finalization (bremsstrahlung, e-, root \"+\"):" << endl;
-    if (flag_lepton == 4 || flag_lepton == 6) cout << endl << "Finalization (bremsstrahlung, mu-, root \"+\"):" << endl;
+    if (flag_lepton == 1 || flag_lepton == 3) std::cout << std::endl << "Finalization (bremsstrahlung, e-, root \"+\"):" << std::endl;
+    if (flag_lepton == 4 || flag_lepton == 6) std::cout << std::endl << "Finalization (bremsstrahlung, mu-, root \"+\"):" << std::endl;
     Foam_BrE2->Finalize(x1, x2); // Foam_BrE2: bremsstrahlung, e-/mu-, root "+"
     }
   }
 
 if (flag_lepton != 1 && flag_lepton != 4) // For positively charged leptons
   {
-  if (flag_lepton == 2 || flag_lepton == 3) cout << endl << "Finalization (elastic scattering, e+):" << endl;
-  if (flag_lepton == 5 || flag_lepton == 6) cout << endl << "Finalization (elastic scattering, mu+):" << endl;
+  if (flag_lepton == 2 || flag_lepton == 3) std::cout << std::endl << "Finalization (elastic scattering, e+):" << std::endl;
+  if (flag_lepton == 5 || flag_lepton == 6) std::cout << std::endl << "Finalization (elastic scattering, mu+):" << std::endl;
   Foam_ElP->Finalize(x1, x2); // Foam_ElP: elastic scattering, e+/mu+
   
-  if (flag_lepton == 2 || flag_lepton == 3) cout << endl << "Finalization (bremsstrahlung, e+, root \"-\"):" << endl;
-  if (flag_lepton == 5 || flag_lepton == 6) cout << endl << "Finalization (bremsstrahlung, mu+, root \"-\"):" << endl;
+  if (flag_lepton == 2 || flag_lepton == 3) std::cout << std::endl << "Finalization (bremsstrahlung, e+, root \"-\"):" << std::endl;
+  if (flag_lepton == 5 || flag_lepton == 6) std::cout << std::endl << "Finalization (bremsstrahlung, mu+, root \"-\"):" << std::endl;
   Foam_BrP1->Finalize(x1, x2); // Foam_BrP1: bremsstrahlung, e+/mu+, root "-"
   
   if (brp2 > 0)
     {
-    if (flag_lepton == 2 || flag_lepton == 3) cout << endl << "Finalization (bremsstrahlung, e+, root \"+\"):" << endl;
-    if (flag_lepton == 5 || flag_lepton == 6) cout << endl << "Finalization (bremsstrahlung, mu+, root \"+\"):" << endl;
+    if (flag_lepton == 2 || flag_lepton == 3) std::cout << std::endl << "Finalization (bremsstrahlung, e+, root \"+\"):" << std::endl;
+    if (flag_lepton == 5 || flag_lepton == 6) std::cout << std::endl << "Finalization (bremsstrahlung, mu+, root \"+\"):" << std::endl;
     Foam_BrP2->Finalize(x1, x2); // Foam_BrP2: bremsstrahlung, e+/mu+, root "+"
     }
   }
@@ -1378,52 +1378,52 @@ if (flag_lepton != 1 && flag_lepton != 4) // For positively charged leptons
 
 //----------------------------------------------------------------------------------------------
 // Writing to the standard output and the *.info file:
-ofstream finfo;
+std::ofstream finfo;
 if (flag_lepton < 4) finfo.open (filename + "_e.info");  // Opening the *.info file for e-/e+
 if (flag_lepton > 3) finfo.open (filename + "_mu.info"); // Opening the *.info file for mu-/mu+
 
 if (finfo.is_open())
   {    
-  cout << endl << "INPUT PARAMETERS AND SOME INFORMATION ON THE EVENTS:" << endl << endl;
-  finfo << "INPUT PARAMETERS AND SOME INFORMATION ON THE EVENTS:" << endl << endl;
+  std::cout << std::endl << "INPUT PARAMETERS AND SOME INFORMATION ON THE EVENTS:" << std::endl << std::endl;
+  finfo << "INPUT PARAMETERS AND SOME INFORMATION ON THE EVENTS:" << std::endl << std::endl;
 
   // Type of the scattered lepton:
   switch (flag_lepton)
     {
     case 1: // e-
       {
-      cout << "* Elastic scattering of electrons (e-) on protons;" << endl;
-      finfo << "* Elastic scattering of electrons (e-) on protons;" << endl;
+      std::cout << "* Elastic scattering of electrons (e-) on protons;" << std::endl;
+      finfo << "* Elastic scattering of electrons (e-) on protons;" << std::endl;
       break;
       }
     case 2: // e+
       {
-      cout << "* Elastic scattering of positrons (e+) on protons;" << endl;
-      finfo << "* Elastic scattering of positrons (e+) on protons;" << endl;
+      std::cout << "* Elastic scattering of positrons (e+) on protons;" << std::endl;
+      finfo << "* Elastic scattering of positrons (e+) on protons;" << std::endl;
       break;
       }
     case 3: // e- and e+
       {
-      cout << "* Elastic scattering of electrons and positrons (e- and e+) on protons;" << endl;
-      finfo << "* Elastic scattering of electrons and positrons (e- and e+) on protons;" << endl;
+      std::cout << "* Elastic scattering of electrons and positrons (e- and e+) on protons;" << std::endl;
+      finfo << "* Elastic scattering of electrons and positrons (e- and e+) on protons;" << std::endl;
       break;
       }
     case 4: // mu-
       {
-      cout << "* Elastic scattering of muons (mu-) on protons;" << endl;
-      finfo << "* Elastic scattering of muons (mu-) on protons;" << endl;
+      std::cout << "* Elastic scattering of muons (mu-) on protons;" << std::endl;
+      finfo << "* Elastic scattering of muons (mu-) on protons;" << std::endl;
       break;
       }
     case 5: // mu+
       {
-      cout << "* Elastic scattering of antimuons (mu+) on protons;" << endl;
-      finfo << "* Elastic scattering of antimuons (mu+) on protons;" << endl;
+      std::cout << "* Elastic scattering of antimuons (mu+) on protons;" << std::endl;
+      finfo << "* Elastic scattering of antimuons (mu+) on protons;" << std::endl;
       break;
       }
     case 6: // mu- and mu+
       {
-      cout << "* Elastic scattering of muons and antimuons (mu- and mu+) on protons;" << endl;
-      finfo << "* Elastic scattering of muons and antimuons (mu- and mu+) on protons;" << endl;
+      std::cout << "* Elastic scattering of muons and antimuons (mu- and mu+) on protons;" << std::endl;
+      finfo << "* Elastic scattering of muons and antimuons (mu- and mu+) on protons;" << std::endl;
       break;
       }
     }
@@ -1433,32 +1433,32 @@ if (finfo.is_open())
     {
     case 1: // A point-like proton
       {
-      cout << "* A point-like proton;" << endl;
-      finfo << "* A point-like proton;" << endl;
+      std::cout << "* A point-like proton;" << std::endl;
+      finfo << "* A point-like proton;" << std::endl;
       break;
       }
     case 2: // A proton with the dipole form factors
       {
-      cout << "* A proton with the dipole form factors;" << endl;
-      finfo << "* A proton with the dipole form factors;" << endl;
+      std::cout << "* A proton with the dipole form factors;" << std::endl;
+      finfo << "* A proton with the dipole form factors;" << std::endl;
       break;
       }
     case 3: // A proton with the Kelly form factors
       {
-      cout << "* A proton with the Kelly form factors;" << endl;
-      finfo << "* A proton with the Kelly form factors;" << endl;
+      std::cout << "* A proton with the Kelly form factors;" << std::endl;
+      finfo << "* A proton with the Kelly form factors;" << std::endl;
       break;
       }
     case 4: // A proton with the Puckett form factors
       {
-      cout << "* A proton with the Puckett form factors;" << endl;
-      finfo << "* A proton with the Puckett form factors;" << endl;
+      std::cout << "* A proton with the Puckett form factors;" << std::endl;
+      finfo << "* A proton with the Puckett form factors;" << std::endl;
       break;
       }
     case 5: // A proton with the form factors specified in the file "const.h"
       {
-      cout << "* A proton with the form factors specified in \"const.h\";" << endl;
-      finfo << "* A proton with the form factors specified in \"const.h\";" << endl;
+      std::cout << "* A proton with the form factors specified in \"const.h\";" << std::endl;
+      finfo << "* A proton with the form factors specified in \"const.h\";" << std::endl;
       break;
       }
     }
@@ -1468,74 +1468,74 @@ if (finfo.is_open())
     {
     case 1: // Primary soft-photon approximation, only lepton bremsstrahlung
       {
-      cout << "* Primary soft-photon approximation, only lepton bremsstrahlung;" << endl;
-      finfo << "* Primary soft-photon approximation, only lepton bremsstrahlung;" << endl;
+      std::cout << "* Primary soft-photon approximation, only lepton bremsstrahlung;" << std::endl;
+      finfo << "* Primary soft-photon approximation, only lepton bremsstrahlung;" << std::endl;
       break;
       }
     case 2: // Primary soft-photon approximation, only proton bremsstrahlung
       {
-      cout << "* Primary soft-photon approximation, only proton bremsstrahlung;" << endl;
-      finfo << "* Primary soft-photon approximation, only proton bremsstrahlung;" << endl;
+      std::cout << "* Primary soft-photon approximation, only proton bremsstrahlung;" << std::endl;
+      finfo << "* Primary soft-photon approximation, only proton bremsstrahlung;" << std::endl;
       break;
       }
     case 3: // Primary soft-photon approximation, all the terms
       {
-      cout << "* Primary soft-photon approximation, all the terms;" << endl;
-      finfo << "* Primary soft-photon approximation, all the terms;" << endl;
+      std::cout << "* Primary soft-photon approximation, all the terms;" << std::endl;
+      finfo << "* Primary soft-photon approximation, all the terms;" << std::endl;
       break;
       }
     case 4: // Modified soft-photon approximation, only lepton bremsstrahlung
       {
-      cout << "* Modified soft-photon approximation, only lepton bremsstrahlung;" << endl;
-      finfo << "* Modified soft-photon approximation, only lepton bremsstrahlung;" << endl;
+      std::cout << "* Modified soft-photon approximation, only lepton bremsstrahlung;" << std::endl;
+      finfo << "* Modified soft-photon approximation, only lepton bremsstrahlung;" << std::endl;
       break;
       }
     case 5: // Modified soft-photon approximation, only proton bremsstrahlung
       {
-      cout << "* Modified soft-photon approximation, only proton bremsstrahlung;" << endl;
-      finfo << "* Modified soft-photon approximation, only proton bremsstrahlung;" << endl;
+      std::cout << "* Modified soft-photon approximation, only proton bremsstrahlung;" << std::endl;
+      finfo << "* Modified soft-photon approximation, only proton bremsstrahlung;" << std::endl;
       break;
       }
     case 6: // Modified soft-photon approximation, all the terms
       {
-      cout << "* Modified soft-photon approximation, all the terms;" << endl;
-      finfo << "* Modified soft-photon approximation, all the terms;" << endl;
+      std::cout << "* Modified soft-photon approximation, all the terms;" << std::endl;
+      finfo << "* Modified soft-photon approximation, all the terms;" << std::endl;
       break;
       }
     case 7: // Improved soft-photon approximation, only lepton bremsstrahlung
       {
-      cout << "* Improved soft-photon approximation, only lepton bremsstrahlung;" << endl;
-      finfo << "* Improved soft-photon approximation, only lepton bremsstrahlung;" << endl;
+      std::cout << "* Improved soft-photon approximation, only lepton bremsstrahlung;" << std::endl;
+      finfo << "* Improved soft-photon approximation, only lepton bremsstrahlung;" << std::endl;
       break;
       }
     case 8: // Improved soft-photon approximation, only proton bremsstrahlung
       {
-      cout << "* Improved soft-photon approximation, only proton bremsstrahlung;" << endl;
-      finfo << "* Improved soft-photon approximation, only proton bremsstrahlung;" << endl;
+      std::cout << "* Improved soft-photon approximation, only proton bremsstrahlung;" << std::endl;
+      finfo << "* Improved soft-photon approximation, only proton bremsstrahlung;" << std::endl;
       break;
       }
     case 9: // Improved soft-photon approximation, all the terms
       {
-      cout << "* Improved soft-photon approximation, all the terms;" << endl;
-      finfo << "* Improved soft-photon approximation, all the terms;" << endl;
+      std::cout << "* Improved soft-photon approximation, all the terms;" << std::endl;
+      finfo << "* Improved soft-photon approximation, all the terms;" << std::endl;
       break;
       }
     case 10: // Accurate QED calculation, only lepton bremsstrahlung
       {
-      cout << "* Accurate QED calculation, only lepton bremsstrahlung;" << endl;
-      finfo << "* Accurate QED calculation, only lepton bremsstrahlung;" << endl;
+      std::cout << "* Accurate QED calculation, only lepton bremsstrahlung;" << std::endl;
+      finfo << "* Accurate QED calculation, only lepton bremsstrahlung;" << std::endl;
       break;
       }
     case 11: // Accurate QED calculation, only proton bremsstrahlung
       {
-      cout << "* Accurate QED calculation, only proton bremsstrahlung;" << endl;
-      finfo << "* Accurate QED calculation, only proton bremsstrahlung;" << endl;
+      std::cout << "* Accurate QED calculation, only proton bremsstrahlung;" << std::endl;
+      finfo << "* Accurate QED calculation, only proton bremsstrahlung;" << std::endl;
       break;
       }
     case 12: // Accurate QED calculation, all the terms
       {
-      cout << "* Accurate QED calculation, all the terms;" << endl;
-      finfo << "* Accurate QED calculation, all the terms;" << endl;
+      std::cout << "* Accurate QED calculation, all the terms;" << std::endl;
+      finfo << "* Accurate QED calculation, all the terms;" << std::endl;
       break;
       }
     }
@@ -1545,20 +1545,20 @@ if (finfo.is_open())
     {
     case 1: // Only electron-positron loops
       {
-      cout << "* Vacuum polarization: only electron-positron loops;" << endl;
-      finfo << "* Vacuum polarization: only electron-positron loops;" << endl;
+      std::cout << "* Vacuum polarization: only electron-positron loops;" << std::endl;
+      finfo << "* Vacuum polarization: only electron-positron loops;" << std::endl;
       break;
       }
     case 2: // Full leptonic contribution
       {
-      cout << "* Vacuum polarization: full leptonic contribution;" << endl;
-      finfo << "* Vacuum polarization: full leptonic contribution;" << endl;
+      std::cout << "* Vacuum polarization: full leptonic contribution;" << std::endl;
+      finfo << "* Vacuum polarization: full leptonic contribution;" << std::endl;
       break;
       }
     case 3: // More accurate data (see http://cmd.inp.nsk.su/~ignatov/vpl/)
       {
-      cout << "* Vacuum polarization: full vacuum polarization correction;" << endl;
-      finfo << "* Vacuum polarization: full vacuum polarization correction;" << endl;
+      std::cout << "* Vacuum polarization: full vacuum polarization correction;" << std::endl;
+      finfo << "* Vacuum polarization: full vacuum polarization correction;" << std::endl;
       break;
       }
     }
@@ -1568,57 +1568,57 @@ if (finfo.is_open())
     {
     case 1: // Approach of Mo & Tsai
       {
-      cout << "* Approach of Mo & Tsai for the TPE amplitudes;" << endl;
-      finfo << "* Approach of Mo & Tsai for the TPE amplitudes;" << endl;
+      std::cout << "* Approach of Mo & Tsai for the TPE amplitudes;" << std::endl;
+      finfo << "* Approach of Mo & Tsai for the TPE amplitudes;" << std::endl;
       break;
       }
     case 2: // Approach of Maximon & Tjon
       {
-      cout << "* Approach of Maximon & Tjon for the TPE amplitudes;" << endl;
-      finfo << "* Approach of Maximon & Tjon for the TPE amplitudes;" << endl;
+      std::cout << "* Approach of Maximon & Tjon for the TPE amplitudes;" << std::endl;
+      finfo << "* Approach of Maximon & Tjon for the TPE amplitudes;" << std::endl;
       break;
       }
     }
     
   // Full energy of incident leptons (MeV):
-  cout << "* Full energy of incident leptons: " << E_li*1000. << " MeV;" << endl;
-  finfo << "* Full energy of incident leptons: " << E_li*1000. << " MeV;" << endl;
+  std::cout << "* Full energy of incident leptons: " << E_li*1000. << " MeV;" << std::endl;
+  finfo << "* Full energy of incident leptons: " << E_li*1000. << " MeV;" << std::endl;
 
   // Cut-off and maximum energies of bremsstrahlung photons (MeV):
-  cout << "* Energies of bremsstrahlung photons: from " << E_g_cut*1000. << " to " << E_g_max*1000. << " MeV;" << endl;
-  finfo << "* Energies of bremsstrahlung photons: from " << E_g_cut*1000. << " to " << E_g_max*1000. << " MeV;" << endl;
+  std::cout << "* Energies of bremsstrahlung photons: from " << E_g_cut*1000. << " to " << E_g_max*1000. << " MeV;" << std::endl;
+  finfo << "* Energies of bremsstrahlung photons: from " << E_g_cut*1000. << " to " << E_g_max*1000. << " MeV;" << std::endl;
 
   // Minimum and maximum polar angles (theta) of scattered leptons (degree):
-  cout << "* Polar angles of scattered leptons (theta): from " << theta_min/degrad << " to " << theta_max/degrad << " degree;" << endl;
-  finfo << "* Polar angles of scattered leptons (theta): from " << theta_min/degrad << " to " << theta_max/degrad << " degree;" << endl;
+  std::cout << "* Polar angles of scattered leptons (theta): from " << theta_min/degrad << " to " << theta_max/degrad << " degree;" << std::endl;
+  finfo << "* Polar angles of scattered leptons (theta): from " << theta_min/degrad << " to " << theta_max/degrad << " degree;" << std::endl;
 
   // Minimum and maximum azimuthal angles (phi) of scattered leptons (degree):
-  cout << "* Azimuthal angles of scattered leptons (phi): from " << phi_min/degrad << " to " << phi_max/degrad << " degree;" << endl;
-  finfo << "* Azimuthal angles of scattered leptons (phi): from " << phi_min/degrad << " to " << phi_max/degrad << " degree;" << endl;
+  std::cout << "* Azimuthal angles of scattered leptons (phi): from " << phi_min/degrad << " to " << phi_max/degrad << " degree;" << std::endl;
+  finfo << "* Azimuthal angles of scattered leptons (phi): from " << phi_min/degrad << " to " << phi_max/degrad << " degree;" << std::endl;
   
   // Storage cell parameters (if it's used):
   if (flag_target == true)
     {
     if (flag_cell == 1) // In the case of uniform distribution of gas pressure
       {
-      cout << "* Uniform distribution of gas pressure; Z from " << cell_zmin << " to " << cell_zmax << " mm;" << endl;
-      finfo << "* Uniform distribution of gas pressure; Z from " << cell_zmin << " to " << cell_zmax << " mm;" << endl;
+      std::cout << "* Uniform distribution of gas pressure; Z from " << cell_zmin << " to " << cell_zmax << " mm;" << std::endl;
+      finfo << "* Uniform distribution of gas pressure; Z from " << cell_zmin << " to " << cell_zmax << " mm;" << std::endl;
       }
   
     if (flag_cell == 2) // In the case of triangle distribution of gas pressure
       {
-      cout << "* Triangle distribution of gas pressure; Z from " << cell_zmin << " to " << cell_zmax << " mm, injection at Z = " << cell_zinj << " mm;" << endl;
-      finfo << "* Triangle distribution of gas pressure; Z from " << cell_zmin << " to " << cell_zmax << " mm, injection at Z = " << cell_zinj << " mm;" << endl;
+      std::cout << "* Triangle distribution of gas pressure; Z from " << cell_zmin << " to " << cell_zmax << " mm, injection at Z = " << cell_zinj << " mm;" << std::endl;
+      finfo << "* Triangle distribution of gas pressure; Z from " << cell_zmin << " to " << cell_zmax << " mm, injection at Z = " << cell_zinj << " mm;" << std::endl;
       }
     }
   
   // Precison for numbers to output:
-  cout.precision(3);
+  std::cout.precision(3);
   finfo.precision(3);
   
   // Solid angle:
-  cout << "* Solid angle: " << scientific << omega << " steradian;" << endl;
-  finfo << "* Solid angle: " << scientific << omega << " steradian;" << endl;
+  std::cout << "* Solid angle: " << std::scientific << omega << " steradian;" << std::endl;
+  finfo << "* Solid angle: " << std::scientific << omega << " steradian;" << std::endl;
 
   // Evaluation of Q^2 and epsilon values for the minimum scattering angle:
   E_g = 0.; theta_g = 0.; phi_g = 0.; // Elastic scattering
@@ -1634,205 +1634,205 @@ if (finfo.is_open())
   double QQ_max = -qq; double eps_min = eps;
   
   // Writing the minimum and maximum values for Q^2 and epsilon:
-  cout << "* Values of Q^2: from " << QQ_min << " to " << QQ_max << " GeV^2;" << endl; // Writing to the standard output
-  cout << "* Values of epsilon: from " << fixed << eps_min << " to " << fixed << eps_max << ";" << endl;
+  std::cout << "* Values of Q^2: from " << QQ_min << " to " << QQ_max << " GeV^2;" << std::endl; // Writing to the standard output
+  std::cout << "* Values of epsilon: from " << std::fixed << eps_min << " to " << std::fixed << eps_max << ";" << std::endl;
   
-  finfo << "* Values of Q^2: from " << QQ_min << " to " << QQ_max << " GeV^2;" << endl; // Writing to the *.info file
-  finfo << "* Values of epsilon: from " << fixed << eps_min << " to " << fixed << eps_max << ";" << endl;
+  finfo << "* Values of Q^2: from " << QQ_min << " to " << QQ_max << " GeV^2;" << std::endl; // Writing to the *.info file
+  finfo << "* Values of epsilon: from " << std::fixed << eps_min << " to " << std::fixed << eps_max << ";" << std::endl;
   
   // Are there any warnings?
   if (flag_warn == false) // There are no warnings
     {
-    cout << "* Warnings: no." << endl;
-    finfo << "* Warnings: no." << endl;
+    std::cout << "* Warnings: no." << std::endl;
+    finfo << "* Warnings: no." << std::endl;
     }
   else // There are some warnings
     {
-    cout << "* Warnings: yes. Please be aware of them!" << endl;
-    finfo << "* Warnings: yes. Please be aware of them!" << endl;
+    std::cout << "* Warnings: yes. Please be aware of them!" << std::endl;
+    finfo << "* Warnings: yes. Please be aware of them!" << std::endl;
     }
 
   // Writing the table containing the number of events:
-  cout << endl << "|---------------------------------------|" << endl; // Writing to the standard output
-  cout << "|           NUMBERS OF EVENTS           |" << endl;
-  cout << "|---------------------------------------|" << endl;
-  if (flag_lepton < 4) cout << "|             |     e-     |     e+     |" << endl;
-  if (flag_lepton > 3) cout << "|             |     mu-    |     mu+    |" << endl;
-  cout << "|---------------------------------------|" << endl;
-  cout << "|    Elastic  |  ";
-  if (flag_lepton != 2 && flag_lepton != 5) cout << setw(9) << count_ElE << " |  ";
-  else cout << "       -- |  ";
-  if (flag_lepton != 1 && flag_lepton != 4) cout << setw(9) << count_ElP << " |" << endl;
-  else cout << "       -- |" << endl;
-  cout << "|  Inelastic  |  ";
-  if (flag_lepton != 2 && flag_lepton != 5) cout << setw(9) << count_BrE1 + count_BrE2 << " |  ";
-  else cout << "       -- |  ";
-  if (flag_lepton != 1 && flag_lepton != 4) cout << setw(9) << count_BrP1 + count_BrP2 << " |" << endl;
-  else cout << "       -- |" << endl;
-  cout << "|---------------------------------------|" << endl;
-  cout << "|      Total  |  ";
-  if (flag_lepton != 2 && flag_lepton != 5) cout << setw(9) << count_ElE + count_BrE1 + count_BrE2 << " |  ";
-  else cout << "       -- |  ";
-  if (flag_lepton != 1 && flag_lepton != 4) cout << setw(9) << count_ElP + count_BrP1 + count_BrP2 << " |" << endl;
-  else cout << "       -- |" << endl;
-  cout << "|---------------------------------------|" << endl;
-  if (flag_rosen == true) { cout << "| Rosenbluth  |               " << setw(9) << nev_0 << " |" << endl;
-  cout << "|---------------------------------------|" << endl; }
+  std::cout << std::endl << "|---------------------------------------|" << std::endl; // Writing to the standard output
+  std::cout << "|           NUMBERS OF EVENTS           |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl;
+  if (flag_lepton < 4) std::cout << "|             |     e-     |     e+     |" << std::endl;
+  if (flag_lepton > 3) std::cout << "|             |     mu-    |     mu+    |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl;
+  std::cout << "|    Elastic  |  ";
+  if (flag_lepton != 2 && flag_lepton != 5) std::cout << std::setw(9) << count_ElE << " |  ";
+  else std::cout << "       -- |  ";
+  if (flag_lepton != 1 && flag_lepton != 4) std::cout << std::setw(9) << count_ElP << " |" << std::endl;
+  else std::cout << "       -- |" << std::endl;
+  std::cout << "|  Inelastic  |  ";
+  if (flag_lepton != 2 && flag_lepton != 5) std::cout << std::setw(9) << count_BrE1 + count_BrE2 << " |  ";
+  else std::cout << "       -- |  ";
+  if (flag_lepton != 1 && flag_lepton != 4) std::cout << std::setw(9) << count_BrP1 + count_BrP2 << " |" << std::endl;
+  else std::cout << "       -- |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl;
+  std::cout << "|      Total  |  ";
+  if (flag_lepton != 2 && flag_lepton != 5) std::cout << std::setw(9) << count_ElE + count_BrE1 + count_BrE2 << " |  ";
+  else std::cout << "       -- |  ";
+  if (flag_lepton != 1 && flag_lepton != 4) std::cout << std::setw(9) << count_ElP + count_BrP1 + count_BrP2 << " |" << std::endl;
+  else std::cout << "       -- |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl;
+  if (flag_rosen == true) { std::cout << "| Rosenbluth  |               " << std::setw(9) << nev_0 << " |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl; }
 
-  finfo << endl << "|---------------------------------------|" << endl; // Writing to the *.info file
-  finfo << "|            NUMBER OF EVENTS           |" << endl;
-  finfo << "|---------------------------------------|" << endl;
-  if (flag_lepton < 4) finfo << "|             |     e-     |     e+     |" << endl;
-  if (flag_lepton > 3) finfo << "|             |     mu-    |     mu+    |" << endl;
-  finfo << "|---------------------------------------|" << endl;
+  finfo << std::endl << "|---------------------------------------|" << std::endl; // Writing to the *.info file
+  finfo << "|            NUMBER OF EVENTS           |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl;
+  if (flag_lepton < 4) finfo << "|             |     e-     |     e+     |" << std::endl;
+  if (flag_lepton > 3) finfo << "|             |     mu-    |     mu+    |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl;
   finfo << "|    Elastic  |  ";
-  if (flag_lepton != 2 && flag_lepton != 5) finfo << setw(9) << count_ElE << " |  ";
+  if (flag_lepton != 2 && flag_lepton != 5) finfo << std::setw(9) << count_ElE << " |  ";
   else finfo << "       -- |  ";
-  if (flag_lepton != 1 && flag_lepton != 4) finfo << setw(9) << count_ElP << " |" << endl;
-  else finfo << "       -- |" << endl;
+  if (flag_lepton != 1 && flag_lepton != 4) finfo << std::setw(9) << count_ElP << " |" << std::endl;
+  else finfo << "       -- |" << std::endl;
   finfo << "|  Inelastic  |  ";
-  if (flag_lepton != 2 && flag_lepton != 5) finfo << setw(9) << count_BrE1 + count_BrE2 << " |  ";
+  if (flag_lepton != 2 && flag_lepton != 5) finfo << std::setw(9) << count_BrE1 + count_BrE2 << " |  ";
   else finfo << "       -- |  ";
-  if (flag_lepton != 1 && flag_lepton != 4) finfo << setw(9) << count_BrP1 + count_BrP2 << " |" << endl;
-  else finfo << "       -- |" << endl;
-  finfo << "|---------------------------------------|" << endl;
+  if (flag_lepton != 1 && flag_lepton != 4) finfo << std::setw(9) << count_BrP1 + count_BrP2 << " |" << std::endl;
+  else finfo << "       -- |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl;
   finfo << "|      Total  |  ";
-  if (flag_lepton != 2 && flag_lepton != 5) finfo << setw(9) << count_ElE + count_BrE1 + count_BrE2 << " |  ";
+  if (flag_lepton != 2 && flag_lepton != 5) finfo << std::setw(9) << count_ElE + count_BrE1 + count_BrE2 << " |  ";
   else finfo << "       -- |  ";
-  if (flag_lepton != 1 && flag_lepton != 4) finfo << setw(9) << count_ElP + count_BrP1 + count_BrP2 << " |" << endl;
-  else finfo << "       -- |" << endl;
-  finfo << "|---------------------------------------|" << endl;
-  if (flag_rosen == true) { finfo << "| Rosenbluth  |               " << setw(9) << nev_0 << " |" << endl;
-  finfo << "|---------------------------------------|" << endl; }
+  if (flag_lepton != 1 && flag_lepton != 4) finfo << std::setw(9) << count_ElP + count_BrP1 + count_BrP2 << " |" << std::endl;
+  else finfo << "       -- |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl;
+  if (flag_rosen == true) { finfo << "| Rosenbluth  |               " << std::setw(9) << nev_0 << " |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl; }
 
   // Precison for numbers to output:
-  cout.precision(4);
+  std::cout.precision(4);
   finfo.precision(4);
   
   // Writing the table containing the values for integrated cross sections:
-  cout << endl << "|---------------------------------------|" << endl; // Writing to the standard output
-  cout << "| INTEGRATED CROSS SECTIONS (microbarn) |" << endl;
-  cout << "|---------------------------------------|" << endl;
-  if (flag_lepton < 4) cout << "|             |     e-     |     e+     |" << endl;
-  if (flag_lepton > 3) cout << "|             |     mu-    |     mu+    |" << endl;
-  cout << "|---------------------------------------|" << endl;
-  cout << "|    Elastic  | ";
-  if (flag_lepton != 2 && flag_lepton != 5) cout << scientific << elast_e << " | ";
-  else cout << "        -- | ";
-  if (flag_lepton != 1 && flag_lepton != 4) cout << scientific << elast_p << " |" << endl;
-  else cout << "        -- |" << endl;
-  cout << "|  Inelastic  | ";
-  if (flag_lepton != 2 && flag_lepton != 5) cout << bre1 + bre2 << " | ";
-  else cout << "        -- | ";
-  if (flag_lepton != 1 && flag_lepton != 4) cout << brp1 + brp2 << " |" << endl;
-  else cout << "        -- |" << endl;
-  cout << "|---------------------------------------|" << endl;
-  cout << "|      Total  | ";
-  if (flag_lepton != 2 && flag_lepton != 5) cout << elast_e + bre1 + bre2 << " | ";
-  else cout << "        -- | ";
-  if (flag_lepton != 1 && flag_lepton != 4) cout << elast_p + brp1 + brp2 << " |" << endl;
-  else cout << "        -- |" << endl;
-  cout << "|---------------------------------------|" << endl;
-  if (flag_rosen == true) { cout << "| Rosenbluth  |              " << rosen << " |" << endl;
-  cout << "|---------------------------------------|" << endl; }
+  std::cout << std::endl << "|---------------------------------------|" << std::endl; // Writing to the standard output
+  std::cout << "| INTEGRATED CROSS SECTIONS (microbarn) |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl;
+  if (flag_lepton < 4) std::cout << "|             |     e-     |     e+     |" << std::endl;
+  if (flag_lepton > 3) std::cout << "|             |     mu-    |     mu+    |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl;
+  std::cout << "|    Elastic  | ";
+  if (flag_lepton != 2 && flag_lepton != 5) std::cout << std::scientific << elast_e << " | ";
+  else std::cout << "        -- | ";
+  if (flag_lepton != 1 && flag_lepton != 4) std::cout << std::scientific << elast_p << " |" << std::endl;
+  else std::cout << "        -- |" << std::endl;
+  std::cout << "|  Inelastic  | ";
+  if (flag_lepton != 2 && flag_lepton != 5) std::cout << bre1 + bre2 << " | ";
+  else std::cout << "        -- | ";
+  if (flag_lepton != 1 && flag_lepton != 4) std::cout << brp1 + brp2 << " |" << std::endl;
+  else std::cout << "        -- |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl;
+  std::cout << "|      Total  | ";
+  if (flag_lepton != 2 && flag_lepton != 5) std::cout << elast_e + bre1 + bre2 << " | ";
+  else std::cout << "        -- | ";
+  if (flag_lepton != 1 && flag_lepton != 4) std::cout << elast_p + brp1 + brp2 << " |" << std::endl;
+  else std::cout << "        -- |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl;
+  if (flag_rosen == true) { std::cout << "| Rosenbluth  |              " << rosen << " |" << std::endl;
+  std::cout << "|---------------------------------------|" << std::endl; }
   
-  finfo << endl << "|---------------------------------------|" << endl; // Writing to the *.info file
-  finfo << "| INTEGRATED CROSS SECTIONS (microbarn) |" << endl;
-  finfo << "|---------------------------------------|" << endl;
-  if (flag_lepton < 4) finfo << "|             |     e-     |     e+     |" << endl;
-  if (flag_lepton > 3) finfo << "|             |     mu-    |     mu+    |" << endl;
-  finfo << "|---------------------------------------|" << endl;
+  finfo << std::endl << "|---------------------------------------|" << std::endl; // Writing to the *.info file
+  finfo << "| INTEGRATED CROSS SECTIONS (microbarn) |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl;
+  if (flag_lepton < 4) finfo << "|             |     e-     |     e+     |" << std::endl;
+  if (flag_lepton > 3) finfo << "|             |     mu-    |     mu+    |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl;
   finfo << "|    Elastic  | ";
-  if (flag_lepton != 2 && flag_lepton != 5) finfo << scientific << elast_e << " | ";
+  if (flag_lepton != 2 && flag_lepton != 5) finfo << std::scientific << elast_e << " | ";
   else finfo << "        -- | ";
-  if (flag_lepton != 1 && flag_lepton != 4) finfo << scientific << elast_p << " |" << endl;
-  else finfo << "        -- |" << endl;
+  if (flag_lepton != 1 && flag_lepton != 4) finfo << std::scientific << elast_p << " |" << std::endl;
+  else finfo << "        -- |" << std::endl;
   finfo << "|  Inelastic  | ";
   if (flag_lepton != 2 && flag_lepton != 5) finfo << bre1 + bre2 << " | ";
   else finfo << "        -- | ";
-  if (flag_lepton != 1 && flag_lepton != 4) finfo << brp1 + brp2 << " |" << endl;
-  else finfo << "        -- |" << endl;
-  finfo << "|---------------------------------------|" << endl;
+  if (flag_lepton != 1 && flag_lepton != 4) finfo << brp1 + brp2 << " |" << std::endl;
+  else finfo << "        -- |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl;
   finfo << "|      Total  | ";
   if (flag_lepton != 2 && flag_lepton != 5) finfo << elast_e + bre1 + bre2 << " | ";
   else finfo << "        -- | ";
-  if (flag_lepton != 1 && flag_lepton != 4) finfo << elast_p + brp1 + brp2 << " |" << endl;
-  else finfo << "        -- |" << endl;
-  finfo << "|---------------------------------------|" << endl;
-  if (flag_rosen == true) { finfo << "| Rosenbluth  |              " << rosen << " |" << endl;
-  finfo << "|---------------------------------------|" << endl; }
+  if (flag_lepton != 1 && flag_lepton != 4) finfo << elast_p + brp1 + brp2 << " |" << std::endl;
+  else finfo << "        -- |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl;
+  if (flag_rosen == true) { finfo << "| Rosenbluth  |              " << rosen << " |" << std::endl;
+  finfo << "|---------------------------------------|" << std::endl; }
 
   // Writing the Rosenbluth differential cross section (averaged over the solid angle):
-  cout << endl << "ROSENBLUTH DIFFERENTIAL CROSS SECTION (averaged over the solid angle):" << endl;
-  cout << rosen/omega << " microbarn / steradian" << endl;
+  std::cout << std::endl << "ROSENBLUTH DIFFERENTIAL CROSS SECTION (averaged over the solid angle):" << std::endl;
+  std::cout << rosen/omega << " microbarn / steradian" << std::endl;
 
-  finfo << endl << "ROSENBLUTH DIFFERENTIAL CROSS SECTION (averaged over the solid angle):" << endl;
-  finfo << rosen/omega << " microbarn / steradian" << endl;
+  finfo << std::endl << "ROSENBLUTH DIFFERENTIAL CROSS SECTION (averaged over the solid angle):" << std::endl;
+  finfo << rosen/omega << " microbarn / steradian" << std::endl;
   
   // Writing the real differential cross sections averaged over the solid angle:
-  cout << endl << "ACTUAL DIFFERENTIAL CROSS SECTION (averaged over the solid angle):" << endl; // Writing to the standard output
-  if (flag_lepton == 1 || flag_lepton == 3) cout << "e-: ";
-  if (flag_lepton == 4 || flag_lepton == 6) cout << "mu-: ";
-  if (flag_lepton != 2 && flag_lepton != 5) cout << (elast_e + bre1 + bre2)/omega << " microbarn / steradian" << fixed << " (delta = " << (elast_e + bre1 + bre2)/rosen - 1. << ")" << endl;
-  if (flag_lepton == 2 || flag_lepton == 3) cout << "e+: ";
-  if (flag_lepton == 5 || flag_lepton == 6) cout << "mu+: ";
-  if (flag_lepton != 1 && flag_lepton != 4) cout << scientific << (elast_p + brp1 + brp2)/omega << " microbarn / steradian" << fixed << " (delta = " << (elast_p + brp1 + brp2)/rosen - 1. << ")" << endl;
+  std::cout << std::endl << "ACTUAL DIFFERENTIAL CROSS SECTION (averaged over the solid angle):" << std::endl; // Writing to the standard output
+  if (flag_lepton == 1 || flag_lepton == 3) std::cout << "e-: ";
+  if (flag_lepton == 4 || flag_lepton == 6) std::cout << "mu-: ";
+  if (flag_lepton != 2 && flag_lepton != 5) std::cout << (elast_e + bre1 + bre2)/omega << " microbarn / steradian" << std::fixed << " (delta = " << (elast_e + bre1 + bre2)/rosen - 1. << ")" << std::endl;
+  if (flag_lepton == 2 || flag_lepton == 3) std::cout << "e+: ";
+  if (flag_lepton == 5 || flag_lepton == 6) std::cout << "mu+: ";
+  if (flag_lepton != 1 && flag_lepton != 4) std::cout << std::scientific << (elast_p + brp1 + brp2)/omega << " microbarn / steradian" << std::fixed << " (delta = " << (elast_p + brp1 + brp2)/rosen - 1. << ")" << std::endl;
   
-  finfo << endl << "ACTUAL DIFFERENTIAL CROSS SECTION (averaged over the solid angle):" << endl; // Writing to the *.info file
+  finfo << std::endl << "ACTUAL DIFFERENTIAL CROSS SECTION (averaged over the solid angle):" << std::endl; // Writing to the *.info file
   if (flag_lepton == 1 || flag_lepton == 3) finfo << "e-: ";
   if (flag_lepton == 4 || flag_lepton == 6) finfo << "mu-: ";
-  if (flag_lepton != 2 && flag_lepton != 5) finfo << (elast_e + bre1 + bre2)/omega << " microbarn / steradian" << fixed << " (delta = " << (elast_e + bre1 + bre2)/rosen - 1. << ")" << endl;
+  if (flag_lepton != 2 && flag_lepton != 5) finfo << (elast_e + bre1 + bre2)/omega << " microbarn / steradian" << std::fixed << " (delta = " << (elast_e + bre1 + bre2)/rosen - 1. << ")" << std::endl;
   if (flag_lepton == 2 || flag_lepton == 3) finfo << "e+: ";
   if (flag_lepton == 5 || flag_lepton == 6) finfo << "mu+: ";
-  if (flag_lepton != 1 && flag_lepton != 4) finfo << scientific << (elast_p + brp1 + brp2)/omega << " microbarn / steradian" << fixed << " (delta = " << (elast_p + brp1 + brp2)/rosen - 1. << ")" << endl;
+  if (flag_lepton != 1 && flag_lepton != 4) finfo << std::scientific << (elast_p + brp1 + brp2)/omega << " microbarn / steradian" << std::fixed << " (delta = " << (elast_p + brp1 + brp2)/rosen - 1. << ")" << std::endl;
 
   // Writing the integrated luminosity (inverse picobarn):
-  cout << endl << "INTEGRATED LUMINOSITY:" << endl; // Writing to the standard output
-  if (flag_rosen == true && flag_lepton < 4) cout << "e0: ";
-  if (flag_rosen == true && flag_lepton > 3) cout << "mu0: ";
-  if (flag_rosen == true) cout << scientific << 1.e-6*nev_0/rosen << " inverse picobarn" << endl;
-  if (flag_lepton == 1 || flag_lepton == 3) cout << "e-: ";
-  if (flag_lepton == 4 || flag_lepton == 6) cout << "mu-: ";
-  if (flag_lepton != 2 && flag_lepton != 5) cout << scientific << 1.e-6*nev_e/(elast_e + bre1 + bre2) << " inverse picobarn" << endl;
-  if (flag_lepton == 2 || flag_lepton == 3) cout << "e+: ";
-  if (flag_lepton == 5 || flag_lepton == 6) cout << "mu+: ";
-  if (flag_lepton != 1 && flag_lepton != 4) cout << scientific << 1.e-6*nev_p/(elast_p + brp1 + brp2) << " inverse picobarn" << endl;
+  std::cout << std::endl << "INTEGRATED LUMINOSITY:" << std::endl; // Writing to the standard output
+  if (flag_rosen == true && flag_lepton < 4) std::cout << "e0: ";
+  if (flag_rosen == true && flag_lepton > 3) std::cout << "mu0: ";
+  if (flag_rosen == true) std::cout << std::scientific << 1.e-6*nev_0/rosen << " inverse picobarn" << std::endl;
+  if (flag_lepton == 1 || flag_lepton == 3) std::cout << "e-: ";
+  if (flag_lepton == 4 || flag_lepton == 6) std::cout << "mu-: ";
+  if (flag_lepton != 2 && flag_lepton != 5) std::cout << std::scientific << 1.e-6*nev_e/(elast_e + bre1 + bre2) << " inverse picobarn" << std::endl;
+  if (flag_lepton == 2 || flag_lepton == 3) std::cout << "e+: ";
+  if (flag_lepton == 5 || flag_lepton == 6) std::cout << "mu+: ";
+  if (flag_lepton != 1 && flag_lepton != 4) std::cout << std::scientific << 1.e-6*nev_p/(elast_p + brp1 + brp2) << " inverse picobarn" << std::endl;
 
-  finfo << endl << "INTEGRATED LUMINOSITY:" << endl; // Writing to the *.info file
+  finfo << std::endl << "INTEGRATED LUMINOSITY:" << std::endl; // Writing to the *.info file
   if (flag_rosen == true && flag_lepton < 4) finfo << "e0: ";
   if (flag_rosen == true && flag_lepton > 3) finfo << "mu0: ";
-  if (flag_rosen == true) finfo << scientific << 1.e-6*nev_0/rosen << " inverse picobarn" << endl;
+  if (flag_rosen == true) finfo << std::scientific << 1.e-6*nev_0/rosen << " inverse picobarn" << std::endl;
   if (flag_lepton == 1 || flag_lepton == 3) finfo << "e-: ";
   if (flag_lepton == 4 || flag_lepton == 6) finfo << "mu-: ";
-  if (flag_lepton != 2 && flag_lepton != 5) finfo << scientific << 1.e-6*nev_e/(elast_e + bre1 + bre2) << " inverse picobarn" << endl;
+  if (flag_lepton != 2 && flag_lepton != 5) finfo << std::scientific << 1.e-6*nev_e/(elast_e + bre1 + bre2) << " inverse picobarn" << std::endl;
   if (flag_lepton == 2 || flag_lepton == 3) finfo << "e+: ";
   if (flag_lepton == 5 || flag_lepton == 6) finfo << "mu+: ";
-  if (flag_lepton != 1 && flag_lepton != 4) finfo << scientific << 1.e-6*nev_p/(elast_p + brp1 + brp2) << " inverse picobarn" << endl;
+  if (flag_lepton != 1 && flag_lepton != 4) finfo << std::scientific << 1.e-6*nev_p/(elast_p + brp1 + brp2) << " inverse picobarn" << std::endl;
   
   if (flag_vepp == true) // In the case of the experiment at VEPP-3
     {
-    cout << endl << "BEAM CURRENT INTEGRAL" << endl; // Writing to the standard output
-    cout << "(at the target thickness of 10^15 atoms / cm^2):" << endl;
-    if (flag_rosen == true) cout << "e0: " << 1.602e-7*nev_0/rosen << " kC" << endl;
-    cout << "e-: " << 1.602e-7*nev_e/(elast_e + bre1 + bre2) << " kC" << endl;
-    cout << "e+: " << 1.602e-7*nev_p/(elast_p + brp1 + brp2) << " kC" << endl;
+    std::cout << std::endl << "BEAM CURRENT INTEGRAL" << std::endl; // Writing to the standard output
+    std::cout << "(at the target thickness of 10^15 atoms / cm^2):" << std::endl;
+    if (flag_rosen == true) std::cout << "e0: " << 1.602e-7*nev_0/rosen << " kC" << std::endl;
+    std::cout << "e-: " << 1.602e-7*nev_e/(elast_e + bre1 + bre2) << " kC" << std::endl;
+    std::cout << "e+: " << 1.602e-7*nev_p/(elast_p + brp1 + brp2) << " kC" << std::endl;
 
-    finfo << endl << "BEAM CURRENT INTEGRAL" << endl; // Writing to the *.info file
-    finfo << "(at the target thickness of 10^15 atoms / cm^2):" << endl;
-    if (flag_rosen == true) finfo << "e0: " << 1.602e-7*nev_0/rosen << " kC" << endl;
-    finfo << "e-: " << 1.602e-7*nev_e/(elast_e + bre1 + bre2) << " kC" << endl;
-    finfo << "e+: " << 1.602e-7*nev_p/(elast_p + brp1 + brp2) << " kC" << endl;
+    finfo << std::endl << "BEAM CURRENT INTEGRAL" << std::endl; // Writing to the *.info file
+    finfo << "(at the target thickness of 10^15 atoms / cm^2):" << std::endl;
+    if (flag_rosen == true) finfo << "e0: " << 1.602e-7*nev_0/rosen << " kC" << std::endl;
+    finfo << "e-: " << 1.602e-7*nev_e/(elast_e + bre1 + bre2) << " kC" << std::endl;
+    finfo << "e+: " << 1.602e-7*nev_p/(elast_p + brp1 + brp2) << " kC" << std::endl;
     }
  
   time (&stoptime); // Stopping the timer
   
   // How many seconds it took to generate events:
-  cout << endl << "It took " << stoptime - starttime << " seconds to generate " << nevents << " events" << endl << endl;
-  finfo << endl << "It took " << stoptime - starttime << " seconds to generate " << nevents << " events" << endl << endl;
+  std::cout << std::endl << "It took " << stoptime - starttime << " seconds to generate " << nevents << " events" << std::endl << std::endl;
+  finfo << std::endl << "It took " << stoptime - starttime << " seconds to generate " << nevents << " events" << std::endl << std::endl;
   
   finfo.close(); // Closing the *.info file
   }
-else { cout << endl << "Error opening *.info file!"; return EXIT_FAILURE; }
+else { std::cout << std::endl << "Error opening *.info file!"; return EXIT_FAILURE; }
 // The end of writing
 //==============================================================================================
 

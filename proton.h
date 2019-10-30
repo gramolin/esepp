@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------------------------
-// This file is part of ESEPP (version 1.4).
+// This file is part of ESEPP (version 1.5).
 //
 // ESEPP is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with ESEPP.  If not, see <http://www.gnu.org/licenses/>.
 //
-// Copyright (c) Alexander Gramolin, 2014. E-mail: gramolin (at) inp.nsk.su 
-// http://gramolin.com/esepp/
+// Copyright (c) Alexander Gramolin, 2019. E-mail: gramolin (at) bu.edu
+// https://github.com/gramolin/esepp/
 //==============================================================================================
 
 

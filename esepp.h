@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------------------------
-// This file is part of ESEPP (version 1.4).
+// This file is part of ESEPP (version 1.5).
 //
 // ESEPP is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with ESEPP.  If not, see <http://www.gnu.org/licenses/>.
 //
-// Copyright (c) Alexander Gramolin, 2014. E-mail: gramolin (at) inp.nsk.su 
-// http://gramolin.com/esepp/
+// Copyright (c) Alexander Gramolin, 2019. E-mail: gramolin (at) bu.edu
+// https://github.com/gramolin/esepp/
 //==============================================================================================
 
 
@@ -580,7 +580,7 @@ int EvalEnergy()
   // Checking the denominator:
   if (Abs(Pow2(A) - Pow2(B)) < 1.e-12)
     {
-    cout << endl << "Warning: too small denominator!" << endl;
+    std::cout << std::endl << "Warning: too small denominator!" << std::endl;
     flag_warn = true;
     return 0;
     }
@@ -610,7 +610,7 @@ void SetFinalFourMomenta()
   // Checking the kinematics:
   if (Abs(Pow2(M) - v_pf*v_pf) > 1.e-8)
     {
-    cout << endl << "Warning: bad kinematics! M^2 - v_pf^2 = " << Pow2(M) - v_pf*v_pf << " GeV^2" << endl;
+    std::cout << std::endl << "Warning: bad kinematics! M^2 - v_pf^2 = " << Pow2(M) - v_pf*v_pf << " GeV^2" << std::endl;
     flag_warn = true;
     }
 
