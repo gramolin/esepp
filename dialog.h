@@ -27,7 +27,7 @@ char mychar[64];
 // Welcome message:
 std::cout << std::endl;
 std::cout << "/////////////////////////////////////////////////////////////////////////////////" << std::endl;
-std::cout << "//    ESEPP v1.4:  Elastic Scattering of Electrons and Positrons on Protons    //" << std::endl;
+std::cout << "//    ESEPP v1.5:  Elastic Scattering of Electrons and Positrons on Protons    //" << std::endl;
 std::cout << "//     Copyright (c) Alexander Gramolin, 2019.     E-mail: gramolin"; std::cout << "@bu.edu     //" << std::endl;
 std::cout << "//     https://github.com/gramolin/esepp/   http://arxiv.org/abs/1401.2959     //" << std::endl;
 std::cout << "//                                                                             //" << std::endl;
