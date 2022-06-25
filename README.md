@@ -1,5 +1,5 @@
 [![arXiv](https://img.shields.io/badge/arXiv-1401.2959-b31b1b.svg)](https://arxiv.org/abs/1401.2959)
-[![DOI:10.1088/0954-3899/41/11/115001](https://img.shields.io/badge/DOI-10.1088/0954-3899/41/11/115001-0000ff.svg)](https://doi.org/10.1088/0954-3899/41/11/115001)
+[![DOI:10.1088/0954-3899/41/11/115001](https://img.shields.io/badge/DOI-10.1088/0954–3899/41/11/115001-0000ff.svg)](https://doi.org/10.1088/0954-3899/41/11/115001)
 
 ## ESEPP: an event generator for the elastic scattering of charged leptons on protons ##
 
