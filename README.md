@@ -1,3 +1,6 @@
+[![arXiv](https://img.shields.io/badge/arXiv-1401.2959-b31b1b.svg)](https://arxiv.org/abs/1401.2959)
+[![DOI:10.1088/0954-3899/41/11/115001](https://img.shields.io/badge/DOI-10.1088/0954-3899/41/11/115001-0000ff.svg)](https://doi.org/10.1088/0954-3899/41/11/115001)
+
 ## ESEPP: an event generator for the elastic scattering of charged leptons on protons ##
 
 ESEPP is a multipurpose event generator developed for the Monte Carlo simulation of unpolarized elastic scattering of charged leptons (electrons, positrons, muons, and antimuons) on protons. The generator takes into account the lowest-order QED radiative corrections to the Rosenbluth cross section including first-order bremsstrahlung without using the soft-photon or ultrarelativistic approximations. A detailed theoretical description of the generator is given in [arXiv:1401.2959](https://arxiv.org/abs/1401.2959) or [J. Phys. G: Nucl. Part. Phys. 41, 115001](https://doi.org/10.1088/0954-3899/41/11/115001) (users of ESEPP are kindly requested to cite this paper).
